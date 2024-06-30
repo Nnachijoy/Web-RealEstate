@@ -5,7 +5,8 @@ import Dashb from './Components/Dash/Dashb';
 import Activities from './Components/Activity/Activities';
 import MyListing from './Components/MyListing/MyListing';
 import AccountSettings from './Components/AccountSettings/AccountSettings';
-import Favourites from './Favourites';
+import Favorites from './Components/Favorites/Favorites';
+import SavedProfile from './Components/SavedProfile/SavedProfile';
 
 import './App.css';  // Import the CSS file
 
@@ -21,7 +22,9 @@ const Dashboard = () => {
       case 'Settings':
         return <MyListing />;
       case 'Messages':
-        return <Favourites />;
+        return <Favorites />;
+        case 'SavedProfile':
+        return <SavedProfile />;
         case 'AccountSettings':
           return <AccountSettings />;
       default:
@@ -65,7 +68,6 @@ const Dashboard = () => {
             </ListGroup.Item>
 
             
-
             <ListGroup.Item
               className="border-0 rounded-5 mt-3 d-flex align-items-center"
               action
@@ -74,7 +76,17 @@ const Dashboard = () => {
             >
               <FaEnvelope className="me-2" /> Favourites
             </ListGroup.Item>
+             
 
+            <ListGroup.Item
+              className="border-0 rounded-5 mt-3 d-flex align-items-center"
+              action
+              onClick={() => setActiveTab('SavedProfile')}
+              active={activeTab === 'SavedProfile'}
+            >
+              <FaEnvelope className="me-2" /> Saved Profile
+            </ListGroup.Item>
+          
 
             
           <ListGroup.Item

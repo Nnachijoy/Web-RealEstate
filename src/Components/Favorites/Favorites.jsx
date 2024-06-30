@@ -16,7 +16,7 @@ import sqft from '../../assets/sqft.png';
 import Search from '../../assets/Search.png';
 import dropdown from '../../assets/dropdown.png';
 import sorry from '../../assets/sorry.png';
-import "./mylisting.css"; 
+
 
 const listingsContainerOne = [
   {
@@ -75,7 +75,9 @@ const listingsContainerOne = [
   }
 ];
 
-const MyListing = () => {
+
+
+const Favorites = () => {
   const [showIcon, setShowIcon] = useState(true);
   const [currentView, setCurrentView] = useState('Approved');
 
@@ -102,38 +104,15 @@ const MyListing = () => {
     }));
   };
 
-  const approvedListings = listingsContainerOne;
-  const unapprovedListings = []; 
+  
 
-  const currentListings = currentView === 'Approved' ? approvedListings : unapprovedListings;
+
 
   return (
-    <div className="">
-      <div className='approved-unapproved-container mx-2'>
-        <h6 
-          className={`approved ${currentView === 'Approved' ? 'active' : ''}`} 
-          onClick={() => setCurrentView('Approved')}
-          style={{
-            color: currentView === 'Approved' ? 'black' : 'black',
-            backgroundColor: currentView === 'Approved' ? '#FFFFFF' : 'transparent'
-          }}
-        >
-          Approved
-        </h6>
-        <h6 
-          className={`unapproved ${currentView === 'Unapproved' ? 'active' : ''}`} 
-          onClick={() => setCurrentView('Unapproved')}
-          style={{
-            color: currentView === 'Unapproved' ? 'black' : 'black',
-            backgroundColor: currentView === 'Unapproved' ? '#FFFFFF' : 'transparent'
-          }}
-        >
-          Unapproved
-        </h6>
-      </div>  
-      
-      <div className='my-listing mx-3 mt-3'>My Listings</div>
-      <div className="filters-container container mt-2">
+    <div>
+    <div className='my-listing mx-3 mt-3'>Favorites</div>
+
+    <div className="filters-container container mt-2">
         <div className="position-relative search-container">
           {showIcon && <img src={Search} alt="searchicon" className="search-icon" />}
           <Form.Control
@@ -207,89 +186,31 @@ const MyListing = () => {
               </Dropdown.Menu>
             </Dropdown>
 
+
+            
+
             <button className='apply-filter'>Apply Filter</button>
+
+
+
           
           </div>
         </div>
+
+
+
+
+
+        
       </div>
 
-      {currentListings.length > 0 ? (
-      <Container className="listings-container mt-3">
-      <Row>
-        {currentListings.slice(0, 3).map((listing, index) => (
-          <Col key={index} xs={12} md={6} lg={4} className='mb-3'>
-            <Card border='light' bg='light'>
-              <Card.Img variant="top" src={listing.image} alt={listing.address} />
-              <button className='custom-button'>SELL</button>
-              <Card.Body className='card-body'>
-                <Card.Title className='card-price'>{listing.price}</Card.Title>
-                <Card.Text>{listing.address}</Card.Text>
-                <div className="listing-details">
-                  <div className="listing-detail-item">
-                    <img src={bed} alt="bed icon" />
-                    <span>{listing.bed}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={room} alt="room icon" />
-                    <span>{listing.room}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={bath} alt="bath icon" />
-                    <span>{listing.bath}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={sqft} alt="sqft icon" />
-                    <span>{listing.sqft}</span>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      <Row className='mt-3'>
-        {currentListings.slice(3).map((listing, index) => (
-          <Col key={index} xs={12} md={6} lg={4} className='mb-3'>
-            <Card border='light' bg='light'>
-              <Card.Img variant="top" src={listing.image} alt={listing.address} />
-              <button className='custom-button'>SELL</button>
-              <Card.Body className='card-body'>
-                <h1>{listing.price}</h1>
-                <div>{listing.address}</div>
-                <div className="listing-details">
-                  <div className="listing-detail-item">
-                    <img src={bed} alt="bed icon" />
-                    <span>{listing.bed}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={room} alt="room icon" />
-                    <span>{listing.room}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={bath} alt="bath icon" />
-                    <span>{listing.bath}</span>
-                  </div>
-                  <div className="listing-detail-item">
-                    <img src={sqft} alt="sqft icon" />
-                    <span>{listing.sqft}</span>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
-    
-      ) : (
-        <div className="unapproved-page">
 
-   <Container className='mt-3'>
+      <Container className='mt-3'>
   <Row>
     <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={firstlistingimage} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
+        <button className='custom-button'>SELL</button>
         <div className='card-body'>
           <h3 className='card-price m-1 p-1'>$148,000</h3>
           <div className='card-text m-1 p-1'>
@@ -316,10 +237,12 @@ const MyListing = () => {
         </div>
       </Card>
     </Col>
+
+
     <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={secondcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
+           <button className='custom-button'>SELL</button>
         <div className='card-body'>
           <h3 className='card-price m-1 p-1'>$148,000</h3>
           <div className='card-text m-1 p-1'>
@@ -346,10 +269,11 @@ const MyListing = () => {
         </div>
       </Card>
     </Col>
+
     <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
+          <button className='custom-button'>SELL</button>
         <div className='card-body'>
           <h3 className='card-price m-1 p-1'>$148,000</h3>
           <div className='card-text m-1 p-1'>
@@ -378,7 +302,7 @@ const MyListing = () => {
     </Col>
   </Row>
 
-  <Row className=''>
+  <Row className='mt-2'>
     <Col>
       <Card border='light' bg='light' className="">
         <img src={fourthcardlisting} alt="card-image" className="" />
@@ -471,16 +395,9 @@ const MyListing = () => {
     </Col>
   </Row>
 </Container>
-
-
-        </div>
-        
-      )}
-      <button className='fixed-add-list-button'>Add Listing</button>
     </div>
-  );
-};
+    
+  )
+}
 
-export default MyListing;
-
-  
+export default Favorites

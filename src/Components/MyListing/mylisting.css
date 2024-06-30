@@ -27,7 +27,7 @@
   margin-top: 20px;
 background-color:  #F1F1F1;
   border-bottom: none;
-  width: 200px;
+  width: 215px;
 }
 
 .approved-unapproved-container .approved,
@@ -76,6 +76,7 @@ background-color:  #F1F1F1;
   color:#020202;
   font-size: 36px;
   font-weight: 600;
+
 }
 
 .listing-details {
@@ -86,7 +87,7 @@ background-color:  #F1F1F1;
   display: flex; /* Nested flexbox for each detail item */
   align-items: center; /* Align items vertically */
   margin-right: 10px; /* Optional margin between items */
-  font-size: 13.5px;
+  font-size: 12.23px;
 }
 
 .listing-detail-item img {
@@ -96,7 +97,7 @@ background-color:  #F1F1F1;
 }
 
 .listing-detail-item span {
-  font-size: 13.5px; /* Adjust the font size as needed */
+  font-size: 12.23px; /* Adjust the font size as needed */
 }
 
 
@@ -127,7 +128,7 @@ background-color:  #F1F1F1;
 
 .card-price {
   font-weight: 700;
-  font-size: 20px ;
+  font-size: 15.29px ;
   line-height: 18.94px;
   color: #16314E;
   margin-top: 7px;
@@ -136,7 +137,7 @@ background-color:  #F1F1F1;
 
 .card-text {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 11.64px;
   line-height: 22.73px;
   color: #16314E; 
 }
@@ -182,7 +183,7 @@ background-color:  #F1F1F1;
 
 .card-span-items {
   font-weight: 400;
-  font-size: 8.6px;
+  font-size: 12.23px;
   line-height: 22.73px;
   color: #16314E;
 }
@@ -429,3 +430,22 @@ background-color:  #F1F1F1;
 }
 
 
+.fixed-add-list-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 23px 20px;
+  background-color:#FF7B29;
+  color: white;
+  border: none;
+  border-radius: 77.83px;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: 500;
+  font-size: 21.79px;
+}
+
+.fixed-add-list-button:hover {
+  background-color: white;
+  color: black;
+}
