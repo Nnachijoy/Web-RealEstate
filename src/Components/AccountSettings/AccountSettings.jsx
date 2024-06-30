@@ -53,12 +53,30 @@ const MyListing = () => {
             <Col md={12}>
               {radioValue === '1' && 
                <div>
-            <Form className='mt-3'>
+            {/* <Form className='mt-3'>
       <Form.Group className="mb-3 position-relatives" controlId="exampleForm.ControlInput1">
         <Form.Control type="name" placeholder="Your first and last given name" className="custom-inputs" />
         <Form.Label className="custom-placeholder-labels">Name</Form.Label>
+        <div>N/A</div> 
+        <div>Edit</div>
       </Form.Group>
-    </Form>
+    </Form> */}
+<Form className='mt-3'>
+  <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput1">
+    <Form.Control
+      type="name"
+      placeholder="Your first and last given name"
+      className="custom-inputs"
+    />
+    <Form.Label className="custom-placeholder-labels">Name</Form.Label>
+    <div className="position-absolute end-0 d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', left: '1000px' }}>
+      <div className="me-2">N/A</div>
+      <div>Edit</div>
+    </div>
+  </Form.Group>
+</Form>
+
+
 
                </div>
               }
