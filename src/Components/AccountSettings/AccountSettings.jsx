@@ -61,7 +61,7 @@ const MyListing = () => {
         <div>Edit</div>
       </Form.Group>
     </Form> */}
-<Form className='mt-3'>
+{/* <Form className='mt-3'>
   <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput1">
     <Form.Control
       type="name"
@@ -69,12 +69,30 @@ const MyListing = () => {
       className="custom-inputs"
     />
     <Form.Label className="custom-placeholder-labels">Name</Form.Label>
-    <div className="position-absolute end-0 d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', left: '1000px' }}>
+    <div className="position-absolute end-0 d-flex align-items-center" style={{ top: '50%', transform: 'translateY(-50%)', right: '10px' }}>
       <div className="me-2">N/A</div>
       <div>Edit</div>
     </div>
   </Form.Group>
+</Form> */}
+
+<Form className='mt-3'>
+  <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlInput1">
+    <div className="position-relative">
+      <Form.Control
+        type="name"
+        placeholder="Your first and last given name"
+        className="custom-inputs pe-5"
+      />
+      <div className="position-absolute top-50 end-0 translate-middle-y d-flex me-2">
+        <div className="me-2">N/A</div>
+        <div>Edit</div>
+      </div>
+    </div>
+    <Form.Label className="custom-placeholder-labels">Name</Form.Label>
+  </Form.Group>
 </Form>
+
 
 
 
