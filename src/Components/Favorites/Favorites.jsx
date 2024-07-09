@@ -110,9 +110,9 @@ const Favorites = () => {
 
   return (
     <div>
-    <div className='my-listing mx-3 mt-3'>Favorites</div>
+    <h3 className='my-listing mx-3 mt-5'>Favorites</h3>
 
-    <div className="filters-container container mt-2">
+    <div className="filters-container mt-2">
         <div className="position-relative search-container">
           {showIcon && <img src={Search} alt="searchicon" className="search-icon" />}
           <Form.Control
@@ -302,11 +302,11 @@ const Favorites = () => {
     </Col>
   </Row>
 
-  <Row className='mt-2'>
-    <Col>
+  <Row>
+    <Col className='mb-5'>
       <Card border='light' bg='light' className="">
-        <img src={fourthcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
+        <img src={firstlistingimage} alt="card-image" className="" />
+        <button className='custom-button'>SELL</button>
         <div className='card-body'>
           <h3 className='card-price m-1 p-1'>$148,000</h3>
           <div className='card-text m-1 p-1'>
@@ -333,10 +333,12 @@ const Favorites = () => {
         </div>
       </Card>
     </Col>
-    <Col>
+
+
+    <Col className='mb-5'>
       <Card border='light' bg='light' className="">
-        <img src={fifthcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
+        <img src={secondcardlisting} alt="card-image" className="" />
+           <button className='custom-button'>SELL</button>
         <div className='card-body'>
           <h3 className='card-price m-1 p-1'>$148,000</h3>
           <div className='card-text m-1 p-1'>
@@ -363,10 +365,11 @@ const Favorites = () => {
         </div>
       </Card>
     </Col>
-    <Col>
+
+    <Col className='mb-5'>
       <Card border='light' bg='light' className="">
         <img src={thirdcardlisting} alt="card-image" className="" />
-        <button className='unapproved-button'>UNAPPROVED</button>
+          <button className='custom-button'>SELL</button>
         <div className='card-body'>
           <h3 className='card-price m-1 p-1'>$148,000</h3>
           <div className='card-text m-1 p-1'>
